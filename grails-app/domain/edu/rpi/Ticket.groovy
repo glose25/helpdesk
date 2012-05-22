@@ -18,7 +18,7 @@ class Ticket {
     }
 	
 	static mapping = {
-		version : false
+		version false
 	}
 
 }

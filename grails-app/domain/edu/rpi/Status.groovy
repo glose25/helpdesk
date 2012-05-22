@@ -10,7 +10,7 @@ class Status {
     }
 
 	static mapping = {
-		version : false
+		version false
 	}
 	
     static constraints = {
