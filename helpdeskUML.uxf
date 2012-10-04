@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>340</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>User
+--
+name
+title
+email
+phone
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>550</x>
+      <y>100</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>IACS Agent
+--
+name
+title
+email
+phone</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>100</y>
+      <w>150</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Team
+--
+name
+listServAddress</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>260</x>
+      <y>100</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>TeamMembers
+--
+Team
+IACS Agent</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>130</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;
+</panel_attributes>
+    <additional_attributes>30;30;140;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>410</x>
+      <y>130</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;</panel_attributes>
+    <additional_attributes>30;30;140;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>270</y>
+      <w>170</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>Ticket
+--
+subject
+longDescription
+artifacts[]: Artifact
+system: System
+status: Status
+createdBy: User
+team: Team
+assignedTo: IACS Agent
+createDate: Date
+needByDate: Date
+statusDate: Date
+--
+getStatus() Status
+listAll()
+listByStatus()
+listByTeam()
+listByAssignedTo()
+listByCreatedBy()
+keywordSearch()
+copy() [recurrence]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>230</x>
+      <y>560</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Status
+--
+name
+description
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>550</x>
+      <y>210</y>
+      <w>158</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes>
+    <additional_attributes>80;130;80;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>230</x>
+      <y>420</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>System
+--
+name
+description
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>420</x>
+      <y>580</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>(examples)
+In Progress
+New
+Solved
+...
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>420</x>
+      <y>420</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>(examples)
+Banner
+Warehouse
+CMMS
+Advance
+...
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>300</x>
+      <y>450</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>300</x>
+      <y>590</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>140</x>
+      <y>320</y>
+      <w>110</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+</panel_attributes>
+    <additional_attributes>30;30;90;150</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>140</x>
+      <y>340</y>
+      <w>110</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+</panel_attributes>
+    <additional_attributes>30;30;90;270</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>230</x>
+      <y>270</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Artifact
+--
+text
+attachment
+createDate: Date
+enteredBy: IACS Agent</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>140</x>
+      <y>290</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+</panel_attributes>
+    <additional_attributes>30;40;90;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>20</x>
+      <y>700</y>
+      <w>310</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=green
+In all Grails objects, there are 2 attributes that 
+come for free:
+dateCreated
+lastUpdatedDate
+
+They are explicitly referenced in the UML
+diagram if they will be queryable fields. </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
